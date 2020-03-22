@@ -19,7 +19,7 @@ Also @spatie created a package that allows us run code asynchronously it's here 
 
 My solution involves a mix of the above stated, Here's my process
 
-1. Get a list of all the requests and split them into chunks (in this solution i used a chunk of 10)
+1. Get a list of all the requests and split them into chunks (in this solution i used a chunk of 100)
 2. Create an async pool using treating each chunk as a single item
 3. Create a multi curl handle for each chunk and call the number of requests in that chunk using `curl_multi_exec`
 
