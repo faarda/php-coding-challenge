@@ -23,7 +23,7 @@ My solution involves a mix of the above stated, Here's my process
 2. Create an async pool using treating each chunk as a single item
 3. Create a multi curl handle for each chunk and call the number of requests in that chunk using `curl_multi_exec`
 
-Run the `index.php` file to test the process, you'll need to run `composer install` to install the dependencies.
+Run the `index.php` file to test the process (most of the code for the solution is in `App.php`), you'll need to run `composer install` to install the dependencies.
 
 I did'nt wan't to overload the curl process, so each handle runs only 100 processes while our pool also spins up 100 processes, this seemed to be a very optimized solution as it took only about 10 minutes to complete the 10000 requests as supposed to the 100 minutes running it serially.
 
